@@ -31,7 +31,7 @@ function is_logged_in(): bool
     return isset($_SESSION['users']['id']);
 }
 
-function allo_roles(array $roles): void
+function allow_roles(array $roles): void
 {
     $current_role = strtolower($_SESSION['users']['role'] ?? '');
     $allowed = array_map('strtolower', $roles);
