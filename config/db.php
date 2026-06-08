@@ -7,7 +7,8 @@ define('DB_user', 'root');
 define('DB_PASS', '');
 define('DB_NAME', 'inventory');
 
-function getDB(): mysqli {
+function getDB(): mysqli
+{
 
     $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     if ($conn->connect_error) {
@@ -18,17 +19,20 @@ function getDB(): mysqli {
     return $conn;
 }
 
-function redirect(string $path): void {
+function redirect(string $path): void
+{
     $base = rtrim(defined('BASE_URL') ? BASE_URL : '/', '/');
     header("Location: $base/$path");
     exit;
 }
 
-function is_logged_in(): bool {
+function is_logged_in(): bool
+{
     return isset($_SESSION['users']['id']);
 }
 
-function allo_roles(array $roles): void {
+function allo_roles(array $roles): void
+{
     $current_role = strtolower($_SESSION['users']['role'] ?? '');
     $allowed = array_map('strtolower', $roles);
 
@@ -38,6 +42,7 @@ function allo_roles(array $roles): void {
     }
 }
 
-function format_rupiah(float $angka): string {
+function format_rupiah(float $angka): string
+{
     return 'Rp ' . number_format($angka, 0, ',', '.');
 }
