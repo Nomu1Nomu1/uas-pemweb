@@ -64,7 +64,7 @@ $currentFolder = basename(dirname($_SERVER['PHP_SELF']));
     <div class="sidebar-user">
 
         <div class="avatar">
-            <?= strtoupper(substr($_SESSION['users']['nama'] ?? 'A',0,1)) ?>
+            <?= strtoupper(substr($_SESSION['users']['nama'] ?? 'A', 0, 1)) ?>
         </div>
 
         <div>
@@ -75,7 +75,7 @@ $currentFolder = basename(dirname($_SERVER['PHP_SELF']));
 
     </div>
 
-    <a href="../auth/logout" class="logout-btn">
+    <a href="../auth/logout.php" class="logout-btn">
         <i class="bi bi-box-arrow-right"></i>
         Logout
     </a>

@@ -46,13 +46,8 @@ a {
 }
 
 .sidebar-logo {
-    height: 75px;
-    padding: 0 28px;
-
-    display: flex;
-    align-items: center;
-
-    border-bottom: 1px solid #ddd;
+    padding: 24px 28px;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .sidebar-logo h3 {
@@ -97,17 +92,14 @@ a {
     font-size: 20px;
 }
 
-.sidebar-bottom {
-    border-top: 1px solid #eaeaea;
-    padding: 20px;
-}
-
 /* ==========================
    USER
 ========================== */
 
 .sidebar-user {
-    padding-bottom: 15px;
+    border-top: 1px solid #eaeaea;
+
+    padding: 20px;
 
     display: flex;
     gap: 12px;
@@ -130,12 +122,8 @@ a {
 }
 
 .logout-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    color: #ef4444;
-    font-weight: 500;
+    color: red;
+    padding: 20px;
 }
 
 /* ==========================
@@ -149,7 +137,7 @@ a {
     display: flex;
     align-items: center;
 
-    padding: 0 32px;
+    padding: 0 28px;
 
     border-bottom: 1px solid #ddd;
 }
